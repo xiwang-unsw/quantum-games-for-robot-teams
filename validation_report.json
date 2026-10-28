@@ -1,0 +1,109 @@
+{
+  "verification_date": "2026-10-27",
+  "status": "passed",
+  "scope": "Current Section 5 experiment and its supplementary numerical results only.",
+  "method": "The six original package files were copied into an isolated scratch directory; the full experiment and plotting commands ran there. Original package data were retained unchanged.",
+  "environment": {
+    "python": "3.9.13",
+    "numpy": "1.25.2",
+    "matplotlib": "3.8.0",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "note": "Verification environment; original data-generation environment is not asserted."
+  },
+  "commands": [
+    "python -B scripts/delivery_stage_experiments.py --missions 10000",
+    "python -B scripts/plot_stage_experiments.py"
+  ],
+  "command_exit_codes": [
+    0,
+    0
+  ],
+  "source_file_integrity": {
+    "scripts/delivery_stage_experiments.py": {
+      "sha256": "565ab6306de926ce502a1552fcec9aa9f32a3c3364a2d7d69224947cdc764900",
+      "matches_source_byte_for_byte": true
+    },
+    "scripts/drone_delivery.py": {
+      "sha256": "22222a6d68127e06ab3fbd5d092c0b25cdf08c805d8859a7ae2bc29b97700371",
+      "matches_source_byte_for_byte": true
+    },
+    "scripts/plot_stage_experiments.py": {
+      "sha256": "26ccbd2ef385dae20936abde58b362bb4697d74c60dd5a3a576a0e0d51b1f052",
+      "matches_source_byte_for_byte": true
+    },
+    "scripts/figure_style.py": {
+      "sha256": "a6a70f79b068946daf7717d3429578ba604860e58854e7f1d88e48f289b50116",
+      "matches_source_byte_for_byte": true
+    },
+    "delivery_results/stage_experiments.json": {
+      "sha256": "9d8e1e58cdf39de2bc730543a6ca80ec568481118a5ad226da1df10b5547ed05",
+      "matches_source_byte_for_byte": true
+    },
+    "delivery_results/README.md": {
+      "sha256": "bf15417bd62068a20bccf72e563bda01de91dd032ac44fc5ccaea23077314ab3",
+      "matches_source_byte_for_byte": true
+    }
+  },
+  "comparison": {
+    "all_nested_fields_compared": true,
+    "numeric_fields_compared": 802,
+    "non_numeric_values_list_order_and_dictionary_keys_match": true,
+    "absolute_tolerance": 1e-10,
+    "relative_tolerance": 1e-12,
+    "tolerance_reason": "Allows floating-point evaluation roundoff far below the manuscript reporting precision; metadata and structural fields must match exactly.",
+    "maximum_absolute_difference": 0.0,
+    "maximum_difference_path": null,
+    "mismatches": []
+  },
+  "result_counts": {
+    "inventory": 45,
+    "memory_sweep": 17,
+    "samples": 13
+  },
+  "missions_per_sampled_configuration": 10000,
+  "seed": 20261014,
+  "maximum_absolute_monte_carlo_z_score": 1.0791301634173682,
+  "figures": {
+    "fig_delivery_inventory": {
+      "png_dimensions_px": [
+        1035,
+        795
+      ],
+      "png_decodes_successfully": true,
+      "png_sha256": "d00624aaf3a50f745bbd0bdcae773e616eb48a6e03fe7200e4c3412ccecf13a4",
+      "pdf_sha256": "d182538250589ba3cb47ca56f82cf2e0135911f1690053dba104c425e92eebd5",
+      "pdf_page_count": 1,
+      "pdf_page_size_points": [
+        248.4,
+        190.8
+      ],
+      "pdf_text_extractable": true,
+      "visual_review": "Passed: plotted curves, labels, legends and axes are visible and legible; no clipping or overlaps identified."
+    },
+    "fig_delivery_ageing": {
+      "png_dimensions_px": [
+        1035,
+        795
+      ],
+      "png_decodes_successfully": true,
+      "png_sha256": "6a2bde8597598b1411b746a47e2af532393e07977040629bdfcb8a2438413c52",
+      "pdf_sha256": "4fa0a756fd134e5adfcbe368464ab758dac4ee5b81f3f949b7e4708eb4f73fad",
+      "pdf_page_count": 1,
+      "pdf_page_size_points": [
+        248.4,
+        190.8
+      ],
+      "pdf_text_extractable": true,
+      "visual_review": "Passed: plotted curves, labels, legends and axes are visible and legible; no clipping or overlaps identified."
+    }
+  },
+  "limits": [
+    "This checks reproducibility within the prescribed-duration mathematical model, not real-flight feasibility or experimental hardware.",
+    "The dependency file pins the two direct third-party libraries, not every transitive dependency."
+  ],
+  "verification_tools": {
+    "pdf_inspection_python": "3.12.14",
+    "pypdf": "6.10.0",
+    "note": "PDF inspection tools are not dependencies of the supplied reproduction scripts."
+  }
+}

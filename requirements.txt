@@ -1,0 +1,3 @@
+# Direct dependencies verified with Python 3.9.13 on Windows.
+numpy==1.25.2
+matplotlib==3.8.0

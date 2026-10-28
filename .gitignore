@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.DS_Store
+Thumbs.db
+/fig_delivery_inventory.pdf
+/fig_delivery_inventory.png
+/fig_delivery_ageing.pdf
+/fig_delivery_ageing.png
